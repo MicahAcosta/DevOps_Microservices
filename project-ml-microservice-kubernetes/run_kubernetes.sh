@@ -5,14 +5,19 @@
 # Step 1:
 # This is your Docker ID/path
 # dockerpath=<>
+dockerpath=thecarver/mika
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-
+kubectl run mika\
+    --image=$dockerpath\
+    --port=80 --labels app=mika
 
 # Step 3:
 # List kubernetes pods
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
+kubectl port-forward mika 8000:80
 
