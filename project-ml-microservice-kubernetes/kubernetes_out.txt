@@ -1,0 +1,19 @@
+(.devopsproj4) ec2-user:~/environment/project4/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ bash run_kubernetes2.sh 
+Error from server (AlreadyExists): pods "mika2" already exists
+NAME     READY   STATUS             RESTARTS   AGE
+mika     0/1     ImagePullBackOff   0          18h
+mika2    1/1     Running            0          60m
+mytest   0/1     ErrImagePull       0          4h49m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
+
+(.devopsproj4) ec2-user:~/environment/project4/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ bash make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
